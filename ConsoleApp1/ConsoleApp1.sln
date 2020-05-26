@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1.csproj", "{B7372833-4E1C-45FA-847C-5FE432CCC68C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1.csproj", "{B7372833-4E1C-45FA-847C-5FE432CCC68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SagaPattern", "..\SagaPattern\SagaPattern.csproj", "{CAA843CE-096D-41DF-8623-4C973544CF5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SagaPattern", "..\SagaPattern\SagaPattern.csproj", "{CAA843CE-096D-41DF-8623-4C973544CF5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper", "..\Dapper\Dapper.csproj", "{43482507-D918-4DE8-86C8-156CD09B14E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapper", "..\Dapper\Dapper.csproj", "{43482507-D918-4DE8-86C8-156CD09B14E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Push", "..\Push\Push.csproj", "{780248C2-B7FF-495D-97B0-3ED9F6DE34FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Push", "..\Push\Push.csproj", "{780248C2-B7FF-495D-97B0-3ED9F6DE34FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircuitBreaker", "..\CircuitBreaker\CircuitBreaker.csproj", "{021D702B-6C3B-4C6E-B7C8-B79311C46629}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircuitBreaker", "..\CircuitBreaker\CircuitBreaker.csproj", "{021D702B-6C3B-4C6E-B7C8-B79311C46629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlBulk", "..\SqlBulk\SqlBulk.csproj", "{2E7CB01B-6433-47D5-AA36-009AEEF40BB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessAwsS3", "..\AccessAwsS3\AccessAwsS3.csproj", "{9F130A07-F715-4762-A5EB-72F341E5CC96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{021D702B-6C3B-4C6E-B7C8-B79311C46629}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{021D702B-6C3B-4C6E-B7C8-B79311C46629}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{021D702B-6C3B-4C6E-B7C8-B79311C46629}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7CB01B-6433-47D5-AA36-009AEEF40BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7CB01B-6433-47D5-AA36-009AEEF40BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7CB01B-6433-47D5-AA36-009AEEF40BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7CB01B-6433-47D5-AA36-009AEEF40BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F130A07-F715-4762-A5EB-72F341E5CC96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F130A07-F715-4762-A5EB-72F341E5CC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F130A07-F715-4762-A5EB-72F341E5CC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F130A07-F715-4762-A5EB-72F341E5CC96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
