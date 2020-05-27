@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using SagaPattern.Entities;
 using CsvHelper;
+using System.Linq;
 
 namespace SagaPattern.FileCsvReader
 {

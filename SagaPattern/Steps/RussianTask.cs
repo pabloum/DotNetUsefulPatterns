@@ -8,9 +8,16 @@ namespace SagaPattern.Steps
 {
     public class RussianTask : StepBody
     {
+        public string foo { get; set; }
+        public string Greet { get; set; }
+        public string Output { get; set; }
+
         public override ExecutionResult Run(IStepExecutionContext context)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("German task:");
+            Console.WriteLine("Greet: " + Greet);
+
+            return ExecutionResult.Next();
         }
     }
 }
