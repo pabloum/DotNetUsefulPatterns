@@ -1,7 +1,16 @@
 
-MERGE INTO JobCoordinatorsEvent WITH (HOLDLOCK) AS t
-USING #JobCoordinatorsEvent_tmp AS dt ON t.JobID = dt.JobID
+-- CTE
+WITH Source AS (
+	SELECT
+		MT.Name,
+		OT.Account,
+		OT.Address
+	FROM MyTable MT, OtherTable OT
+);
 
+MERGE INTO JobCoordinatorsEvent WITH (HOLDLOCK) AS t
+-- USING #JobCoordinatorsEvent_tmp AS dt ON t.JobID = dt.JobID -- other option
+USING Source AS dt ON t.Name = dt.Name
 WHEN MATCHED AND dt.LastUpdate > t.LastUpdate
 THEN
     UPDATE SET JobID = dt.JobID
