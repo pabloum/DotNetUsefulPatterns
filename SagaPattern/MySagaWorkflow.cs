@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SagaPattern.Steps;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using WorkflowCore.Interface;
@@ -20,26 +21,32 @@ namespace SagaPattern
             builder.
                 StartWith(context => Console.WriteLine("Begin Saga"))
                 .Saga(saga => saga
-                    .StartWith<>()
+                    .StartWith<SpanishTask>()
+                    .Input(t => t.Greet, data => data.boo)
+                    .Input(t => t.foo)
+                    .Input(t => t.foo, data => data.boo)
+                    .Output(data => data.boo, step => step.Output)
+                    .CompensateWith<SpanishTask>()
+
+                    .Then<EnglishTask>()
                     .Input(t => t.foo, data => data.boo)
                     .Input(t => t.foo, data => data.boo)
                     .Output(data => data.boo, step => step.Output)
-                    .CompensateWith<>()
+                    .CompensateWith<EnglishCompensationTask>()
 
-                    .Then<>()
+                    .Then<FrenchTask>()
                     .Input(t => t.foo, data => data.boo)
                     .Input(t => t.foo, data => data.boo)
                     .Output(data => data.boo, step => step.Output)
-                    .CompensateWith<>()
+                    .CompensateWith<FrenchCompensationTask>()
 
-                    .Then<>()
+                    .Then<GermanTask>()
                     .Input(t => t.foo, data => data.boo)
                     .Input(t => t.foo, data => data.boo)
                     .Output(data => data.boo, step => step.Output)
-                    .CompensateWith<>()
+                    .CompensateWith<GermanCompensationTask>()
 
-                    .Then<>()
-                    .Input(t => t.foo, data => data.boo)
+                    .Then<RussianTask>()
                     .Input(t => t.foo, data => data.boo)
                 )
                 .Then(context =>
