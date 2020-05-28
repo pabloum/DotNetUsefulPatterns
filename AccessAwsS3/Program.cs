@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Amazon;
+using Amazon.S3;
+using System;
 
 namespace AccessAwsS3
 {
@@ -7,6 +9,12 @@ namespace AccessAwsS3
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            var awsAccessKeyId = "";
+            var awsAccessKeySecret = "";
+            var bucketName = "filesfromftp";
+
+            var awsClient = new AmazonS3Client(awsAccessKeyId, awsAccessKeySecret, RegionEndpoint.USEast2);
         }
     }
 }
